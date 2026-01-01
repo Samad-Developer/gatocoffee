@@ -1,5 +1,3 @@
-"use client"
-
 import { Send, MapPin, Mail, Phone, Clock, Instagram, Twitter } from "lucide-react"
 
 export function ContactUs() {

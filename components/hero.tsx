@@ -1,12 +1,9 @@
-"use client"
-
-import { useState } from "react"
 import Image from "next/image"
 import { Coffee, Sparkles, ArrowRight, Sun, Zap, X } from "lucide-react"
-import { useGatoModal } from "@/providers/ModalContext"
+import { HeroOrderButton } from "./HeroOrderButton"
 
 export function Hero() {
-  const { openModal } = useGatoModal()
+
 
   return (
     <section className="relative min-h-screen bg-[#FFFDF9] overflow-hidden pt-24 pb-12">
@@ -37,13 +34,7 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-            <button
-              onClick={() => openModal("Orders Coming Soon", "We're not accepting orders just yet. Our roastery is in its final stages.")}
-              className="w-full sm:w-auto px-8 py-5 bg-slate-900 text-white rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-orange-500 transition-all duration-300 shadow-xl shadow-orange-200 active:scale-95"
-            >
-              Order Now
-              <ArrowRight className="w-5 h-5" />
-            </button>
+            <HeroOrderButton/>
 
             <div className="flex items-center gap-3">
               <div className="flex -space-x-3">
@@ -70,7 +61,7 @@ export function Hero() {
             {/* Top Wide Image */}
             <div className="col-span-2 relative h-[250px] md:h-[350px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
               <Image
-                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+                src="/hero/hero1.jpg"
                 alt="Professional Barista"
                 fill
                 className="object-cover"
@@ -88,7 +79,7 @@ export function Hero() {
 
               {/* New Image inside the card */}
               <Image
-                src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" // replace with your desired image
+                src="/hero/hero2.jpg" // replace with your desired image
                 alt="Coffee beans"
                 fill
                 className="absolute inset-0 object-cover rounded-[2.5rem] z-0"
@@ -109,7 +100,7 @@ export function Hero() {
 
               {/* New Image inside the card */}
               <Image
-                src="https://images.unsplash.com/photo-1541167760496-1628856ab772" // replace with your desired image
+                src="/hero/hero3.jpg" // replace with your desired image
                 alt="Happy coffee cup"
                 fill
                 className="absolute inset-0 object-cover rounded-[2.5rem] z-0"

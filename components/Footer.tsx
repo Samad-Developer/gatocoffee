@@ -1,12 +1,7 @@
-"use client"
-
 import Link from "next/link"
 import { Instagram, Twitter, ArrowUp, Mail, MapPin, Coffee } from "lucide-react"
 
 export function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
-  }
 
   return (
     <footer className="bg-slate-900 pt-24 pb-12 text-white relative overflow-hidden">

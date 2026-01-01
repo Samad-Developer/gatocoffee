@@ -1,8 +1,8 @@
 "use client"
 
 import { ArrowRight, Coffee, IceCream, Wind, Flame } from "lucide-react"
-import Link from "next/link"
-import { useGatoModal } from "@/providers/ModalContext"
+import { HeroOrderButton } from "./HeroOrderButton"
+
 
 const TASTE_CATEGORIES = [
   {
@@ -36,7 +36,7 @@ const TASTE_CATEGORIES = [
 ]
 
 export function MenuPreview() {
-  const { openModal } = useGatoModal();
+
 
   return (
     <section id="menu" className="py-24 bg-[#FFFDF9]">
@@ -55,13 +55,7 @@ export function MenuPreview() {
           </div>
           
           {/* External Link Button */}
-          <button 
-            onClick={() => openModal("Menu Launching Soon", "We are currently finalizing our seasonal bean selection. Check back in Q1 2026!")}
-            className="group flex items-center gap-3 px-8 py-4 bg-slate-900 text-white rounded-2xl font-bold hover:bg-orange-500 transition-all shadow-lg"
-          >
-            View Full Menu
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
+          <HeroOrderButton/>
         </div>
 
         {/* Categories Grid */}
