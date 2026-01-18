@@ -1,7 +1,8 @@
 "use client"
 
-import { ShoppingBag, Menu, X, Coffee, ArrowRight } from "lucide-react"
+import { ShoppingBag, Menu, X, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { useGatoModal } from "@/providers/ModalContext"
 import { useState } from "react"
 
@@ -44,12 +45,12 @@ export function Navbar() {
 
           {/* Logo Section */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="hidden md:flex w-10 h-10 bg-slate-900 rounded-xl items-center justify-center group-hover:bg-orange-500 transition-colors duration-300">
-              <Coffee className="w-6 h-6 text-white" />
+            <div className="flex w-20 h-20 rounded-full items-center justify-center overflow-hidden">
+              <Image src="/gato.jpg" alt="Gato Logo" width={64} height={64} className="object-cover rounded-full" />
             </div>
-            <span className="text-2xl font-black tracking-tighter uppercase text-slate-900">
+            {/* <span className="text-2xl font-black tracking-tighter uppercase text-slate-900">
               GATO<span className="text-teal-500">.</span>
-            </span>
+            </span> */}
           </Link>
 
           {/* Desktop Navigation */}
@@ -67,18 +68,18 @@ export function Navbar() {
 
           {/* Action Buttons */}
           <div className="flex items-center gap-4">
-            <button
+            {/* <button
               onClick={() => openModal("Orders Coming Soon", "We're not accepting orders just yet. Our roastery is in its final stages.")}
-              className="flex px-5 py-3 bg-slate-900 text-white rounded-2xl font-bold items-center justify-center gap-3 hover:bg-orange-500 transition-all duration-300 active:scale-95"
+              className="flex px-4 py-3 cursor-pointer bg-[#B96D4B] text-white rounded-[12px] font-bold items-center justify-center gap-3 hover:bg-[#a05e3f] transition-all duration-300 active:scale-95"
             >
               Order Now
               <ArrowRight className="w-5 h-5" />
-            </button>
+            </button> */}
 
             {/* Balanced Mobile Menu Button (Perfect Circle) */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="lg:hidden w-12 h-12 flex items-center justify-center bg-slate-900 text-white rounded-full transition-all active:scale-90 relative z-[110]"
+              className="lg:hidden w-12 h-12 flex items-center justify-center bg-gray-50 text-black rounded-full transition-all active:scale-90 relative z-[110]"
               aria-label="Toggle menu"
             >
               <div className="relative w-6 h-6 flex items-center justify-center">

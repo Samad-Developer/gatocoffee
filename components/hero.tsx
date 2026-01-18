@@ -6,11 +6,9 @@ export function Hero() {
 
 
   return (
-    <section className="relative min-h-screen bg-[#FFFDF9] overflow-hidden pt-24 pb-12">
+    <section className="relative min-h-screen bg-[#FFFDF9] overflow-hidden pt-36 pb-12">
 
-      {/* Playful Background Glows */}
-      <div className="absolute top-[-10%] right-[-5%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-orange-200/40 rounded-full blur-[80px] md:blur-[120px]" />
-      <div className="absolute bottom-[-5%] left-[-5%] w-[250px] md:w-[400px] h-[250px] md:h-[400px] bg-teal-100/40 rounded-full blur-[60px] md:blur-[100px]" />
+
 
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
@@ -24,7 +22,7 @@ export function Hero() {
 
             <h1 className="text-6xl md:text-8xl font-black text-slate-900 leading-[0.85] tracking-tighter uppercase">
               SIP. <br />
-              <span className="text-orange-500">GRIN.</span> <br />
+              <span className="text-[#B86C4A]">GRIN.</span> <br />
               GATO<span className="text-teal-500">!</span>
             </h1>
           </div>
